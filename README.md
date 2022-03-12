@@ -1,3 +1,3 @@
 # portfolio
 
-https://github.com/gfgdjv/portfolio.git
+https://gfgdjv.github.io/portfolio/
