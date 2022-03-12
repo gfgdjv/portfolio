@@ -128,6 +128,13 @@
   .about__desc {
     margin: 40px 0px;
   }
+
+  @media (max-width:  480px) {
+    .about__container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
   
   .about__avatar {
     width: 243px;
@@ -142,10 +149,46 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 480px) {
+    .about__container{
+      flex-direction: column-reverse;
+    }
+    .about__avatar {
+      width: 170px;
+      height: 170px;
+    }
+    .about__info {
+      padding-right: 23px;
+    }
+  }
   
   .recent-posts {
     background: #edf7fa;
     padding: 27px 0px 32px;
+  }
+
+  @media (max-width: 480px) {
+    .recent-posts__top {
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+    .recent-posts__link {
+      display: none;
+    }
+    .recent-posts__articles {
+      flex-direction: column;
+      padding-bottom: 0px 5px 38px;
+    }
+    .recent-posts__article {
+      width: 100%;
+      margin-right: 0;
+      padding: 12px 20px 22px;
+      margin-bottom: 17px;
+    }
+  .recent-posts__article:last-child {
+    margin-bottom: 0;
+  }
   }
   
   .recent-posts__top {
@@ -163,7 +206,6 @@
     background: #ffffff;
     box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
     border-radius: 4px;
-    width: 49%;
     margin-right: 2%;
     padding: 24px 21px 28px 23px;
   }
@@ -211,13 +253,13 @@
 
 .works__date {
     margin-right: 36px;
-    width: 62px;
-    height: 25px;
+padding: 5px 10px;
     background: #142850;
     border-radius: 16px;
     color: #ffffff;
-    font-weight: bold;
-    padding-left: 10px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .work__category {
@@ -232,6 +274,27 @@
     margin-top: 30px;
     font-size: 22px;
     color: #000000;
+}
+
+@media (max-width: 480px) {
+  .featured__works {
+    display: flex;
+    overflow: auto;
+  }
+
+  .work {
+      padding: 0px 0px 20px;
+      flex-direction: column;
+     max-width: 100%;
+      flex-shrink: 0;
+  }
+
+  .work__img-wrap {
+    max-width: 100%;
+    max-height: 230px;
+    border-radius: 6px;
+    overflow: hidden;
+ }
 }
 
 .social__list {
